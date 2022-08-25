@@ -1,1 +1,1 @@
-worker slack-test.exe
+worker: slack-test.exe
