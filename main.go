@@ -31,9 +31,6 @@ func main() {
 
 	godotenv.Load(".env")
 
-	os.Setenv("SLACK_BOT_TOKEN", "xoxb-3974165223013-3979635926100-N9g6HNlpuBbNK2Ggrq2i8Fxj")
-	os.Setenv("SLACK_APP_TOKEN", "xapp-1-A03UJFTRXJS-4000845376944-4368811de475f3a8b2c17acba1786d149643dcaef16d3de371d39b163a3a1b6e")
-
 	bot := slacker.NewClient(os.Getenv("SLACK_BOT_TOKEN"), os.Getenv("SLACK_APP_TOKEN"))
 	client := witai.NewClient(os.Getenv("WIT_AI_TOKEN"))
 	wolframClient := &wolfram.Client{AppID: os.Getenv("WOLFRAM_APP_ID")}
